@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:200");
+
+body {
+  height: 100%;
+  background-image: url("../src/bg.png");
+  background-repeat: repeat;
+  color: #000000;
+  font-family: Arial;
+  font-size: 12px;
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.headerText {
+  width: auto;
+  font-family: "Raleway";
+  font-size: 2.5rem;
+}
+.box {
+  background-color: #ffffff;
+  color: #000000;
+  width: 80%;
+  margin-left: 10%;
+  margin-top: -2px;
+  border: solid 2px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding: 10px;
+}
+.pl1Wrapper,
+.pl2Wrapper {
+  content: "";
+  top: calc(-1 * var(--borderWidth));
+  left: calc(-1 * var(--borderWidth));
+  height: calc(100% + var(--borderWidth) * 2);
+  width: calc(100% + var(--borderWidth) * 2);
+  background: linear-gradient(
+    60deg,
+    #f79533,
+    #f37055,
+    #ef4e7b,
+    #a166ab,
+    #5073b8,
+    #1098ad,
+    #07b39b,
+    #6fba82
+  );
+  border-radius: calc(2 * var(--borderWidth));
+  z-index: -1;
+  animation: animatedgradient 8s ease alternate infinite;
+  background-size: 300% 300%;
+}
+
+@keyframes animatedgradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.pl1Wrapper,
+.pl2Wrapper {
+  background-color: #ffffff;
+  display: inline-block;
+  font-family: "Raleway";
+  width: 20%;
+  border: solid 3px black;
+  font-size: 1.5rem;
+  margin-top: 3rem;
+  color: white;
+}
+
+.pl1Wrapper {
+  float: left;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+  margin-right: 5%;
+}
+
+.pl2Wrapper {
+  float: right;
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+  margin-left: 5%;
+}
+
+.stBtn {
+  margin-top: 3rem;
+}
+button {
+  background: #11412d;
+  color: #fff;
+  border: none;
+  position: relative;
+  height: 60px;
+  font-size: 1.6em;
+  padding: 0 2em;
+  cursor: pointer;
+  transition: 800ms ease all;
+  outline: none;
+}
+
+button:hover {
+  background-image: url("../src/bg.png");
+  color: #11412d;
+}
+button:before,
+button:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 2px;
+  width: 0;
+  background: #11412d;
+  transition: 400ms ease all;
+}
+button:after {
+  right: inherit;
+  top: inherit;
+  left: 0;
+  bottom: 0;
+}
+button:hover:before,
+button:hover:after {
+  width: 100%;
+  transition: 800ms ease all;
+}
+.backSide {
+  padding: 1rem;
+}
+
+.gameInfo {
+  font-family: "Raleway";
+  font-size: 1.5rem;
+}
